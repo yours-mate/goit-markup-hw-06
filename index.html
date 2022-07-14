@@ -124,34 +124,28 @@
           <ul class="task-list list">
             <li class="task-item">
               <a href="#" class="task-item-link link">
-                <div class="task-item-thumb">
-                  <img src="./images/box1.jpg" alt="Руки человека, который пишет код" width="370" />
-                  <div class="task-item-title">Десктопные приложения</div>
-                </div>
+                <img src="./images/box1.jpg" alt="Руки человека, который пишет код" width="370" />
+                <p class="task-item-title">Десктопные приложения</p>
               </a>
             </li>
             <li class="task-item">
               <a href="#" class="task-item-link link">
-                <div class="task-item-thumb">
-                  <img
-                    src="./images/box2.jpg"
-                    alt="Руки женщины с телефоном перед ноутбуком"
-                    width="370"
-                  />
-                  <div class="task-item-title">Мобильные приложения</div>
-                </div>
+                <img
+                  src="./images/box2.jpg"
+                  alt="Руки женщины с телефоном перед ноутбуком"
+                  width="370"
+                />
+                <p class="task-item-title">Мобильные приложения</p>
               </a>
             </li>
             <li class="task-item">
               <a href="#" class="task-item-link link">
-                <div class="task-item-thumb">
-                  <img
-                    src="./images/box3.jpg"
-                    alt="Руки человека с планшетом с цветовой гаммой в нем"
-                    width="370"
-                  />
-                  <div class="task-item-title">Дизайнерские Решения</div>
-                </div>
+                <img
+                  src="./images/box3.jpg"
+                  alt="Руки человека с планшетом с цветовой гаммой в нем"
+                  width="370"
+                />
+                <p class="task-item-title">Дизайнерские Решения</p>
               </a>
             </li>
           </ul>
@@ -395,28 +389,25 @@
           </div>
           <div class="user comment">
             <label class="user-lbl comment" for="modal-usercomment">Комментарий</label>
-            <input
+            <textarea
               class="user-inp comment"
-              type="text"
               name="user-info"
               id="modal-usercomment"
               placeholder="Введите текст"
-            />
+            ></textarea>
           </div>
-          <div class="company-policy">
-            <input
-              class="modal-policy visually-hidden"
-              type="checkbox"
-              name="user-info"
-              id="modal-policy"
-            />
-            <label for="modal-policy"
-              >Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label
-            >
-          </div>
-        </form>
 
-        <button class="modal-submit-btn" type="submit">Отправить</button>
+          <label class="modal-policy-lbl">
+            <input class="modal-policy-inp" type="checkbox" name="user-info" />
+            <svg class="modal-policy-icon" width="16" height="15">
+              <use href="./images/icons.svg#icon-check-form"></use>
+            </svg>
+            <span class="modal-policy-txt">Соглашаюсь с рассылкой и принимаю</span>
+            <a class="modal-policy-link" href="#">Условия договора</a></label
+          >
+
+          <button class="modal-submit-btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
@@ -483,23 +474,17 @@
         </div>
         <div class="footer-form-container">
           <h2 class="footer-form-title">Подпишитесь на рассылку</h2>
-          <div class="form-div">
-            <input
-              class="footer-inp"
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              id="footer-email"
-            />
-            <label class="footer-form lbl" for="footer-email">
-              <button class="footer-btn" type="submit">
-                <span class="btn-text">Подписаться</span>
+          <form class="form-footer">
+            <input class="footer-inp" type="email" name="email" placeholder="E-mail" />
+            <label class="footer-form lbl" for="footer-submit-btn">
+              <button class="footer-btn" type="submit" id="footer-submit-btn">
+                <span class="footer-btn-text">Подписаться</span>
                 <svg class="footer-form-svg" width="24" height="24">
                   <use href="./images/icons.svg#icon-send-form"></use>
                 </svg>
               </button>
             </label>
-          </div>
+          </form>
         </div>
       </div>
     </footer>

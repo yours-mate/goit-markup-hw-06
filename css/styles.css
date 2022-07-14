@@ -327,7 +327,7 @@ header {
   margin-right: 30px;
 }
 
-.task-item-thumb {
+.task-item-link {
   position: relative;
 }
 
@@ -339,7 +339,6 @@ header {
   height: 70px;
 
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--another-accent-color);
@@ -594,7 +593,6 @@ header {
 
 .user-inp:focus {
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
 }
 
 .user-inp:focus-visible {
@@ -606,16 +604,93 @@ header {
 }
 
 .user-inp.comment {
+  resize: none;
   height: 120px;
   padding: 12px 16px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.company-policy {
+.user-inp.comment:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/* .company-policy {
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
+  align-items: center;
+} */
+
+.modal-policy-lbl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* margin-left: 8px;
+  line-height: 1.71; */
+}
+
+.modal-policy-txt {
+  margin-right: 5px;
+}
+
+.modal-policy-link {
+  color: var(--accent-color);
+}
+
+.modal-policy-inp {
+  appearance: none;
+}
+
+.modal-policy-icon {
+  margin-right: 8px;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+  fill: var(--another-accent-color);
+  background-color: var(--another-accent-color);
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-policy-inp:checked + .modal-policy-icon {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.modal-submit-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 0px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: var(--another-accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-btn:hover {
+  background-color: var(--btn-hover-color);
 }
 
 /* Главное содержимое Портфолио */
@@ -862,11 +937,12 @@ footer {
   color: var(--another-accent-color);
 }
 
-.form-div {
+.form-footer {
   display: flex;
 }
 
 .footer-inp {
+  padding: 15px 16px;
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -878,10 +954,16 @@ footer {
   color: var(--another-accent-color);
 }
 
+.footer-inp:focus-visible {
+  outline: none;
+}
+
 .footer-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0px;
+  border: none;
   width: 200px;
   height: 50px;
 
@@ -890,6 +972,12 @@ footer {
   border-radius: 4px;
 
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn:hover {
+  background-color: var(--btn-hover-color);
 }
 
 .footer-btn-text {
